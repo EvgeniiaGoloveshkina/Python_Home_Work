@@ -1,25 +1,25 @@
 # 34. *Даны два файла, в каждом из которых находится запись многочлена. 
 # Задача - сформировать файл, содержащий сумму многочленов.
 # 2x² + 4x + 5 = 0 и x² + 5x + 3 = 0 => 3x² + 9x + 8 = 0
-with open('Task_34_1.txt', 'w', encoding='utf-8') as file:
-    file.write('2*x^2 + 5*x^5=0')
-with open('Task_34_2.txt', 'w', encoding='utf-8') as file:
-    file.write('23*x^4 + 9*x^6=0')
+# with open('Task_34_1.txt', 'w', encoding='utf-8') as file:
+#     file.write('2*x^2 + 5*x^5=0')
+# with open('Task_34_2.txt', 'w', encoding='utf-8') as file:
+#     file.write('23*x^4 + 9*x^6=0')
 
-with open('Task_34_1.txt','r') as file:
-    Task_34_1 = file.readline()
-    list_of_Task_34_1 = Task_34_1.split()
+# with open('Task_34_1.txt','r') as file:
+#     Task_34_1 = file.readline()
+#     list_of_Task_34_1 = Task_34_1.split()
 
 
-with open('Task_34_2.txt','r') as file:
-  Task_34_2 = file.readline()
-  list_of_Task_34_2 =Task_34_2.split()
+# with open('Task_34_2.txt','r') as file:
+#   Task_34_2 = file.readline()
+#   list_of_Task_34_2 =Task_34_2.split()
 
-print(f'{list_of_Task_34_1} + {list_of_Task_34_2}')
-sum_poly = list_of_Task_34_1 + list_of_Task_34_2
+# print(f'{list_of_Task_34_1} + {list_of_Task_34_2}')
+# sum_poly = list_of_Task_34_1 + list_of_Task_34_2
 
-with open('Task_34_sum.txt', 'w', encoding='utf-8') as file:
-    file.write(f'{list_of_Task_34_1} + {list_of_Task_34_2}')
+# with open('Task_34_sum.txt', 'w', encoding='utf-8') as file:
+#     file.write(f'{list_of_Task_34_1} + {list_of_Task_34_2}')
 
 
 
@@ -61,3 +61,24 @@ with open('Task_34_sum.txt', 'w', encoding='utf-8') as file:
 #         count2 += 2
 # print(new_poly)
 
+# Задача 34. Даны два файла, в каждом из которых находится запись многочлена, приравненного к нулю. 
+# Задача - сформировать файл, содержащий сумму многочленов (суммируем подобные слагаемые).
+# Пример:
+# 1 Файл : 2*x2 + 4*x + 5 = 0
+# 2 Файл : 4*x2 + 7*x + 9 = 0
+# 3 Файл: (содержит результат) 6*x2 + 11*x + 14 = 0
+
+with open('Task_34_1', 'w', encoding='utf-8') as file:
+    file.write('2*x^2 + 5*x^5')
+with open('Task_34_2.txt', 'w', encoding='utf-8') as file:
+    file.write('23*x^4 + 9*x^6')
+with open('Task_34_1','r') as file:
+    Task_34_1 = file.readline()
+    list_of_Task_34_1 = Task_34_1.split()
+with open('Task_34_2.txt','r') as file:
+    Task_34_2 = file.readline()
+    list_of_Task_34_2 = Task_34_2.split()
+print(f'{list_of_Task_34_1} + {list_of_Task_34_2}')
+sum_poly = list_of_Task_34_1 + list_of_Task_34_2
+with open('Task_34_sum.txt', 'w', encoding='utf-8') as file:
+    file.write(f'{list_of_Task_34_1} + {list_of_Task_34_2}')
