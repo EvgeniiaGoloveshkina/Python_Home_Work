@@ -12,3 +12,4 @@ while i <= count:
     else:
         i += 1
 print(f"Простые множители числа {number}: {simple_multipliers}")
+
