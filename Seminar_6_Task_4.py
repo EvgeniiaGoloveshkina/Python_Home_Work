@@ -1,11 +1,9 @@
-#Подсчитать сумму цифр в вещественном числе.
+# Напишите программу, которая принимает на вход вещественное число и 
+# показывает сумму его цифр.
 
-import os
-os.system('cls')
-import random
+num = input('Введите вещественное число:')
+num_lst = list('1234567890')
+summa = 0
 
-number = random.uniform (100,2)
-print('Вещественное число = ',number)
-row = str(float(number)).split('.')
-figures = row[0]+row[1]  
-print('Сумма цифр числа  =', sum(int(i) for i in str(figures))) 
+print(sum(list(map(int, list(filter(lambda s: s in num_lst, num))))))
+
